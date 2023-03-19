@@ -15,7 +15,7 @@ const Coffee = () => {
   const [dataProduct, setDataProduct] = useState([])
 
   useEffect(()=> {
-    axios.get('http://192.168.8.122:5000/api/v1/products?cat=coffee')
+    axios.get('https://coffeeshopmobilebe.cyclic.app/api/v1/products?cat=coffee')
     .then((res)=> setDataProduct(res.data.data))
     .catch((err)=> console.log(err.message))
   }, [])
@@ -43,11 +43,11 @@ const Coffee = () => {
                 navigation.navigate('DetailProduct', {
                   name: item.name,
                   price: item.price,
-                  images: `http://192.168.8.122:5000/uploads/images/${item.images[0].filename}`                 
+                  images: `https://coffeeshopmobilebe.cyclic.app/uploads/images/${item.images[0].filename}`                 
                 })
               }} >
                 <Image 
-                source={{uri: `http://192.168.8.122:5000/uploads/images/${item.images[0].filename}`}}
+                source={{uri: `https://coffeeshopmobilebe.cyclic.app/uploads/images/${item.images[0].filename}`}}
                 // source={require('../../src/images/hazelnut-latte.jpg')}
                 style={{
                   width: '65%',

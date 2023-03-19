@@ -47,7 +47,7 @@ const LoginScreen = () => {
         }
 
         axios({
-            url: 'http://192.168.8.122:5000/api/v1/auth/login',
+            url: 'https://coffeeshopmobilebe.cyclic.app/api/v1/auth/login',
             method: 'POST',
             data: loginForm
         }).then((res)=> {
