@@ -22,7 +22,8 @@ const DetailProductScreen = ({route}) => {
         width: 200,
         height: 200,
         borderRadius: 100,
-        alignSelf: 'center'
+        alignSelf: 'center',
+        marginTop: 10
       }}>
 
       </Image>

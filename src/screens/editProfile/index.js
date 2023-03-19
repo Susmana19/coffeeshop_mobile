@@ -53,7 +53,8 @@ const EditProfileScreen = () => {
                     style={style.textInput}
                     placeholder={'Enter your name'}
                     placeholderTextColor="#9F9F9F" 
-                    value={registerForm.email}
+                    // value={registerForm.email}
+                    value="Zulaikha"
                     onChange={(value)=> setRegisterForm({email: value})}  
                 />
             </View>
@@ -62,7 +63,6 @@ const EditProfileScreen = () => {
                         radioButtons={radioButtons} 
                         onPress={onPressRadioButton}
                         layout= 'row'
-
                     />
             </View>
 
@@ -75,7 +75,8 @@ const EditProfileScreen = () => {
                     style={style.textInput}
                     placeholder={'Enter your email address'}
                     placeholderTextColor="#9F9F9F" 
-                    value={registerForm.email}
+                    // value={registerForm.email}
+                    value="zulaikha@gmail.com"
                     onChange={(value)=> setRegisterForm({email: value})}  
                 />
             </View>
@@ -83,9 +84,10 @@ const EditProfileScreen = () => {
                 <Text style={style.label}>Phone Number</Text>
                 <TextInput 
                     style={style.textInput}
-                    placeholder={'Enter your email address'}
+                    placeholder={'Enter your phone number'}
                     placeholderTextColor="#9F9F9F" 
-                    value={registerForm.email}
+                    // value={registerForm.email}
+                    value="081245678"
                     onChange={(value)=> setRegisterForm({email: value})}  
                 />
         </View>            
@@ -95,7 +97,8 @@ const EditProfileScreen = () => {
                     style={style.textInput}
                     placeholder={'Enter your date of birth'}
                     placeholderTextColor="#9F9F9F" 
-                    value={registerForm.email}
+                    // value={registerForm.email}
+                    value="December 21th 1998"
                     onChange={(value)=> setRegisterForm({email: value})}  
                 />
         </View>  
@@ -105,7 +108,8 @@ const EditProfileScreen = () => {
                     style={style.textInput}
                     placeholder={'Enter your delivery address'}
                     placeholderTextColor="#9F9F9F" 
-                    value={registerForm.email}
+                    // value={registerForm.email}
+                    value="Iskandar Street Block A Number 102"
                     onChange={(value)=> setRegisterForm({email: value})}  
                 />
         </View> 

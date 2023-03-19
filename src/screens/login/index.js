@@ -52,7 +52,8 @@ const LoginScreen = () => {
             data: loginForm
         }).then((res)=> {
             AsyncStorage.setItem('@userData', JSON.stringify(res.data.data))
-            ToastAndroid.show('Login Successfully', ToastAndroid.SHORT)
+            ToastAndroid.show('Login Successfully', ToastAndroid.SHORT);
+            navigation.navigate("Tab")
         }).catch((err) => {
             ToastAndroid.show('Login Failed', ToastAndroid.SHORT)
             console.log(err.response);

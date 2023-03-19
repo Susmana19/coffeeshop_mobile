@@ -47,7 +47,7 @@ const HomeScreen = () => {
 
   return (
     <ScrollView>
-      <Text style={[commonStyle.mlbase, style.title]}>Halo, {isLogin.value ? isLogin.data.user.name : '' }</Text>
+      <Text style={[commonStyle.mlbase, style.greeting]}>Halo, {isLogin.value ? isLogin.data.user.name : '' }</Text>
         <Text style={[commonStyle.mlbase, style.title]} >
             A good coffee is{'\n'}a good day
         </Text>

@@ -62,11 +62,12 @@ function App() {
   return (
     <NavigationContainer>
 
-      <Stack.Navigator initialRouteName='Home'>
+      <Stack.Navigator initialRouteName='Tab'>
 
       {isLogin.value ? (<>
       
       <Stack.Screen name="Tab" component={TabScreen} options={{headerShown: false}} />
+      <Stack.Screen name="Home" component={HomeScreen} options={{headerShown: false}} />
       <Stack.Screen name="Cart" component={CartScreen} options={{title: 'My Cart'}} />
       <Stack.Screen name="Delivery" component={DeliveryScreen} options={{title: 'Checkout'}} />
       <Stack.Screen name="Payment" component={PaymentScreen} options={{title: 'Payment'}} />
@@ -103,7 +104,7 @@ export function TabScreen() {
       <Tab.Navigator>
         <Tab.Screen name="Home" component={HomeScreen} options={{headerShown: false}} />
         <Tab.Screen name="Profile" component={ProfileScreen} options={{headerShown: false}} />
-        <Tab.Screen name="LogOut" component={LogoutScreen} options={{headerShown: false}} />
+        <Tab.Screen name="Logout" component={LogoutScreen} options={{headerShown: false}} />
       </Tab.Navigator>
   );
 }

@@ -40,7 +40,7 @@ const ProfileScreen = () => {
             </View>
         </View>
 
-        <Pressable onPress={()=> {navigation.navigate('History')}} style={style.cardOption}>
+        <Pressable style={style.cardOption}>
             <Text style={{fontSize: 20, fontWeight: 'bold'}}>Order History</Text>
             <Image />
         </Pressable>
