@@ -14,7 +14,7 @@ const navigation = useNavigation()
             height: '100%',
             resizeMode: 'cover'
         }}>
-        <ScrollView>
+        <View>
 
         <Pressable
         onPress={ ()=> {navigation.navigate('AfterWelcome')} }
@@ -23,7 +23,7 @@ const navigation = useNavigation()
                 Get Started
             </Text>
         </Pressable> 
-        </ScrollView>
+        </View>
 
 
         </ImageBackground>
