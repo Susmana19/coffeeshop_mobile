@@ -51,10 +51,7 @@ const HomeScreen = () => {
         <Text style={[commonStyle.mlbase, style.title]} >
             A good coffee is{'\n'}a good day
         </Text>
-        <Pressable onPress={()=> {
-        AsyncStorage.removeItem('@userData')
-        alert('logouted')
-      }}><Text>Logout</Text></Pressable>
+
         <Favorite/>
         <Coffee/>
         <NonCoffee/>

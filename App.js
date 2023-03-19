@@ -5,6 +5,7 @@ import { View, Text } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 //screen
 import HomeScreen from './src/screens/home';
@@ -24,9 +25,11 @@ import CoffeeScreen from './src/screens/products/Coffee';
 import AddOnScreen from './src/screens/products/AddOn';
 import NonCoffeeScreen from './src/screens/products/NonCoffee';
 import FoodScreen from './src/screens/products/Food';
+import LogoutScreen from './src/screens/logout';
 
 
 const Stack = createNativeStackNavigator();
+const Tab = createBottomTabNavigator();
 
 function App() {
   const [isLogin, setIsLogin] = React.useState({
@@ -58,11 +61,12 @@ function App() {
 
   return (
     <NavigationContainer>
+
       <Stack.Navigator initialRouteName='Home'>
 
       {isLogin.value ? (<>
       
-      <Stack.Screen name="Home" component={HomeScreen} options={{headerShown: false}} />
+      <Stack.Screen name="Tab" component={TabScreen} options={{headerShown: false}} />
       <Stack.Screen name="Cart" component={CartScreen} options={{title: 'My Cart'}} />
       <Stack.Screen name="Delivery" component={DeliveryScreen} options={{title: 'Checkout'}} />
       <Stack.Screen name="Payment" component={PaymentScreen} options={{title: 'Payment'}} />
@@ -93,6 +97,16 @@ function App() {
 
 export default App;
 
+
+export function TabScreen() {
+  return (
+      <Tab.Navigator>
+        <Tab.Screen name="Home" component={HomeScreen} options={{headerShown: false}} />
+        <Tab.Screen name="Profile" component={ProfileScreen} options={{headerShown: false}} />
+        <Tab.Screen name="LogOut" component={LogoutScreen} options={{headerShown: false}} />
+      </Tab.Navigator>
+  );
+}
 
 
 
